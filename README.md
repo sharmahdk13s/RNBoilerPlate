@@ -16,7 +16,7 @@
 To create a new project using the boilerplate simply run :
 
 ```
-npx react-native@latest init MyApp --template react-native-kit-mobmaxime
+npx @react-native-community/cli init MyApp --template react-native-kit-mobmaxime
 ```
 
 ## Libraries Using RNKitMobmaxime 📚
