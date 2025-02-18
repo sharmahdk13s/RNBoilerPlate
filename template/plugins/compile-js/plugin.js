@@ -49,7 +49,7 @@ module.exports = {
         process.exit(1);
       }
 
-      if (!value) {
+      if (value) {
         console.log("\n");
 
         console.log("📦 Loading the build tool...");
