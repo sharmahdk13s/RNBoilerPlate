@@ -5,7 +5,9 @@
     "module": "ESNext",
     "outDir": "../../js",
     "noEmit": false,
+    "emitDeclarationOnly": false,
     "isolatedModules": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true
   }
 }
