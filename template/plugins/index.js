@@ -5,7 +5,8 @@ const prompts = require("prompts");
 const printSuccessPlugin = require("./printSuccess");
 
 // List of plugin to apply (ordered)
-const plugins = [typescriptPlugin, printSuccessPlugin];
+// const plugins = [typescriptPlugin, printSuccessPlugin];
+const plugins = [printSuccessPlugin];
 
 /**
  * @typedef {Object} Plugin
