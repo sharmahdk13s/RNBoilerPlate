@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 const { execSync, spawnSync } = require("node:child_process");
 
-const TYPESCRIPT_VERSION = "5.6.3";
+const TYPESCRIPT_VERSION = "5.7.3";
 
 function isYarnAvailable() {
   try {

@@ -7,6 +7,8 @@ module.exports = {
   async apply(value, previousValues) {
     return new Promise((resolve) => {
       console.log("\n");
+      console.log("value...", value);
+      console.log("previousValues...", previousValues);
       console.log(
         "Mobmaxime React-Native Boilerplate initialized with success ! 🚀\n"
       );

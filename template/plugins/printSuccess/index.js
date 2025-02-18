@@ -4,6 +4,6 @@ const { apply } = require("./plugin");
 
 module.exports = {
   apply,
-  name: "typescript", //'printSuccess',
+  name: "printSuccess",
   promptsOptions,
 };
