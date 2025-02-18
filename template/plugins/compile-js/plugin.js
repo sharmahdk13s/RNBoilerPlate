@@ -83,7 +83,7 @@ module.exports = {
           execSync("cp -R ./src ./src", { stdio: "pipe" });
           execSync("rm -rf __mocks__", { stdio: "pipe" });
           execSync("cp -R ./__mocks__ ./__mocks__", { stdio: "pipe" });
-          execSync("rm -rf js", { stdio: "pipe" });
+          // execSync("rm -rf js", { stdio: "pipe" });
         } catch {
           console.error(
             "🚨 Failed to copy assets or replace source. If you are using windows, please use git bash."
@@ -92,9 +92,9 @@ module.exports = {
         }
 
         console.log("🌀 Removing types ...");
-        execSync("rm -rf src/types", { stdio: "pipe" });
-        execSync("rm -f src/navigation/paths.js", { stdio: "pipe" });
-        execSync("rm -f src/navigation/types.js", { stdio: "pipe" });
+        // execSync("rm -rf src/types", { stdio: "pipe" });
+        // execSync("rm -f src/navigation/paths.js", { stdio: "pipe" });
+        // execSync("rm -f src/navigation/types.js", { stdio: "pipe" });
       }
 
       resolve();
