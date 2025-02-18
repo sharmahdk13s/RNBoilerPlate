@@ -27,7 +27,7 @@ module.exports = {
             "        ``             ```                    ``            `.                  "
         )}`
       );
-      if (previousValues.typescript) {
+      if (!previousValues.typescript) {
         console.log(blue("  THE TYPESCRIPT VERSION 📘"));
       } else {
         console.log(yellow("  THE JAVASCRIPT VERSION 📒"));
@@ -44,7 +44,7 @@ module.exports = {
         "- ⭐ If you love this boilerplate, give us a star, you will be a ray of sunshine in our lives :) https://github.com/sharmahdk13s/RNKitMobmaxime"
       );
 
-      if (!previousValues.typescript) {
+      if (previousValues.typescript) {
         console.log("\n");
         console.log(
           red(

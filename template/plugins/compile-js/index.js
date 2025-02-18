@@ -5,5 +5,5 @@ const { apply } = require("./plugin");
 module.exports = {
   apply,
   name: "typescript",
-  promptsOptions,
+  // promptsOptions,
 };

@@ -1,6 +1,6 @@
 module.exports = {
-  color: 'blue',
+  color: "blue",
   initial: true,
-  message: '📘 Using typescript ?',
-  type: 'confirm',
+  message: "📘 Using typescript ?",
+  type: "confirm",
 };
