@@ -2,11 +2,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const prompts = require("prompts");
 const typescriptPlugin = require("./compile-js");
-// const printSuccessPlugin = require("./printSuccess");
+const printSuccessPlugin = require("./printSuccess");
 
 // List of plugin to apply (ordered)
-// const plugins = [typescriptPlugin, printSuccessPlugin];
-const plugins = [typescriptPlugin];
+const plugins = [typescriptPlugin, printSuccessPlugin];
 
 /**
  * @typedef {Object} Plugin
