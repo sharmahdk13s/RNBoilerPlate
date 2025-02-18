@@ -89,6 +89,7 @@ yarn start
 ```
 
 **After all dependencies installed**
+
 Put [.env](https://rb.gy/hs8t9w ".env") file at project root level, which contains all confidential information including API Base-URL.
 
 ## Step 2: Start your Application
