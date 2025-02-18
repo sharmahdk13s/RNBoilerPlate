@@ -88,6 +88,10 @@ yarn install
 yarn start
 ```
 
+**After all dependencies installed**
+
+Put [.env](https://rb.gy/hs8t9w ".env") file at project root level, which contains all confidential information including API Base-URL.
+
 ## Step 2: Start your Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
