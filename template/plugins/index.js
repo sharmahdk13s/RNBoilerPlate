@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const prompts = require('prompts');
-const typescriptPlugin = require('./compile-js');
-const printSuccessPlugin = require('./printSuccess');
+const prompts = require("prompts");
+// const typescriptPlugin = require('./compile-js');
+const printSuccessPlugin = require("./printSuccess");
 
 // List of plugin to apply (ordered)
 const plugins = [typescriptPlugin, printSuccessPlugin];
@@ -26,7 +26,7 @@ async function applyPlugin(name, plugin, response) {
     await plugin.apply(null, response);
     return { [name]: null, ...response };
   }
-  const { value } = await prompts({ ...plugin.promptsOptions, name: 'value' });
+  const { value } = await prompts({ ...plugin.promptsOptions, name: "value" });
   await plugin.apply(value, response);
   return { [name]: value, ...response };
 }
@@ -40,7 +40,7 @@ module.exports = {
     return plugins.reduce(
       (acc, { name, ...plugin }) =>
         acc.then((response) => applyPlugin(name, plugin, response)),
-      Promise.resolve({}),
+      Promise.resolve({})
     );
   },
 };
