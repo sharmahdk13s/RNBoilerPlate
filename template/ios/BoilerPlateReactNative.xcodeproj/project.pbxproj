@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05996634C36D4A7989247DD5 /* futura_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8291FCB691E4673AF237857 /* futura_medium.otf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-BoilerPlateReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-BoilerPlateReactNative.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		3E39D7B9E9B04F599A0DABFA /* futura_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEC241E898694D1C86E3E25C /* futura_book.otf */; };
 		51977DF168C7C218BC41C606 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		3E39D7B9E9B04F599A0DABFA /* futura_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEC241E898694D1C86E3E25C /* futura_book.otf */; };
-		05996634C36D4A7989247DD5 /* futura_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8291FCB691E4673AF237857 /* futura_medium.otf */; };
-		A0C1EAD3B84D44C5BFDC3EE2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */; };
 		912F805CE527437E8E8948BA /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65490F1EBACA487193C2FAF7 /* Poppins-Medium.ttf */; };
 		93AFB36E193C4AD3B03CE8CE /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5863EBC24E634A079BC98473 /* Poppins-Regular.ttf */; };
+		A0C1EAD3B84D44C5BFDC3EE2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */; };
 		C75C3DF89EA049A0998952FD /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99980D7D531D45E0BFC985B9 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BoilerPlateReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerPlateReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BoilerPlateReactNative/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BoilerPlateReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = BoilerPlateReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-BoilerPlateReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateReactNative.debug.xcconfig"; path = "Target Support Files/Pods-BoilerPlateReactNative/Pods-BoilerPlateReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-BoilerPlateReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilerPlateReactNative.release.xcconfig"; path = "Target Support Files/Pods-BoilerPlateReactNative/Pods-BoilerPlateReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		5863EBC24E634A079BC98473 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-BoilerPlateReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BoilerPlateReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65490F1EBACA487193C2FAF7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BoilerPlateReactNative/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BoilerPlateReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99980D7D531D45E0BFC985B9 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		B8291FCB691E4673AF237857 /* futura_medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = futura_medium.otf; path = ../src/assets/fonts/futura_medium.otf; sourceTree = "<group>"; };
+		BEC241E898694D1C86E3E25C /* futura_book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = futura_book.otf; path = ../src/assets/fonts/futura_book.otf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		BEC241E898694D1C86E3E25C /* futura_book.otf */ = {isa = PBXFileReference; name = "futura_book.otf"; path = "../src/assets/fonts/futura_book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B8291FCB691E4673AF237857 /* futura_medium.otf */ = {isa = PBXFileReference; name = "futura_medium.otf"; path = "../src/assets/fonts/futura_medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		65490F1EBACA487193C2FAF7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5863EBC24E634A079BC98473 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		99980D7D531D45E0BFC985B9 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +51,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040930F428B747B59BEBC2FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEC241E898694D1C86E3E25C /* futura_book.otf */,
+				B8291FCB691E4673AF237857 /* futura_medium.otf */,
+				104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */,
+				65490F1EBACA487193C2FAF7 /* Poppins-Medium.ttf */,
+				5863EBC24E634A079BC98473 /* Poppins-Regular.ttf */,
+				99980D7D531D45E0BFC985B9 /* Poppins-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* BoilerPlateReactNative */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,20 +124,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		040930F428B747B59BEBC2FF /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				BEC241E898694D1C86E3E25C /* futura_book.otf */,
-				B8291FCB691E4673AF237857 /* futura_medium.otf */,
-				104271FBEAB842F78DAAA5B7 /* Poppins-Bold.ttf */,
-				65490F1EBACA487193C2FAF7 /* Poppins-Medium.ttf */,
-				5863EBC24E634A079BC98473 /* Poppins-Regular.ttf */,
-				99980D7D531D45E0BFC985B9 /* Poppins-SemiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

@@ -11,21 +11,26 @@
     "url": "git+https://github.com/sharmahdk13s/RNKitMobmaxime.git"
   },
   "keywords": [
+    "react-native",
+    "starter-kit",
     "react",
     "native",
     "react-native",
+    "typescript",
+    "javascript",
     "boilerplate",
     "code",
     "mobmaxime",
-    "labs"
+    "thecodingmachine"
   ],
-  "author": "Gulsher Khan",
+  "author": "Mobmaxime RN",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sharmahdk13s/RNKitMobmaxime/issues"
   },
   "homepage": "https://github.com/sharmahdk13s/RNKitMobmaxime#readme",
   "dependencies": {
-    "kleur": "^4.1.5"
+    "kleur": "^4.1.5",
+    "prompts": "^2.4.1"
   }
 }
