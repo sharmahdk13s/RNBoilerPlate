@@ -12,18 +12,14 @@ module.exports = {
       );
       console.log(
         `${green(
-          "                                                                    .-`    `::  \n" +
-            " `/////////////     `/shhhy+-   ://.        /sy/                   /ss/   :NMN: \n" +
-            " `sssssyhhhyhhy:` `yMMMMNNMMMd. osss:     `hMMMh-    .-`         `+ss:   +MMm/. \n" +
-            "      :MMM+----. `mMMm+:-`.oo/` osssyo`  `dMMMMh-   ohhh-       `oyy+-  sMMd/.  \n" +
-            "      :MMM+`     oMMN/-         osssyhs`.mMMMMMh-   -hds`      .syy+- `hMMh:`   \n" +
-            "      :MMM+`     hMMd:          oss-ohhhMMMhdMMh-    `.       +NNm/. .dMMy:`    \n" +
-            "      :MMM+`     oMMN/          oss-`shdMMd:dMMh-    :-`     sMMd/. -NMMo-      \n" +
-            "      :MMM+`     `mMMm/`  `/+:. oss- `sdMd:.hMMh-   hMys-  `hMMh:` -hdy-`       \n" +
-            "      :MMM+`      `yMMMMdssss+  oss.  `oh/- hMMh-   -hyo:  dMMs:` -ss+`         \n" +
-            "      .oys:`        .+yhyo/-    -::`    ``  -syo-     ..`  +mo-   `//           \n" +
-            "        ``             ```                    ``            `.                  "
-        )}`
+"ooooooooo.   ooooo      ooo         ooo        ooooo           .o8                                                o8o                              
+`888   `Y88. `888b.     `8'         `88.       .888'           "888                                                `"'                              
+ 888   .d88'  8 `88b.    8           888b     d'888   .ooooo.   888oooo.  ooo. .oo.  .oo.    .oooo.   oooo    ooo oooo  ooo. .oo.  .oo.    .ooooo.  
+ 888ooo88P'   8   `88b.  8           8 Y88. .P  888  d88' `88b  d88' `88b `888P"Y88bP"Y88b  `P  )88b   `88b..8P'  `888  `888P"Y88bP"Y88b  d88' `88b 
+ 888`88b.     8     `88b.8  8888888  8  `888'   888  888   888  888   888  888   888   888   .oP"888     Y888'     888   888   888   888  888ooo888 
+ 888  `88b.   8       `888           8    Y     888  888   888  888   888  888   888   888  d8(  888   .o8"'88b    888   888   888   888  888    .o 
+o888o  o888o o8o        `8          o8o        o888o `Y8bod8P'  `Y8bod8P' o888o o888o o888o `Y888""8o o88'   888o o888o o888o o888o o888o `Y8bod8P' 
+      )}`
       );
       if (!previousValues.typescript) {
         console.log(blue("  THE TYPESCRIPT VERSION 📘"));
