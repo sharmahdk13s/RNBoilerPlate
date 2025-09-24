@@ -1,4 +1,5 @@
 # RNKitMobmaxime
+
 ⚛️ React Native Boilerplate: Jumpstart your app development with essential configurations for React Native projects. Includes libraries, navigation, state management, and styling setup. Streamline your workflow and focus on building amazing mobile experiences! 📱✨
 
 # Key Features
@@ -20,9 +21,12 @@ npx @react-native-community/cli init MyApp --template https://github.com/sharmah
 ```
 
 ## Create .env file at the root directory with following configurtion to make login and auth feature works.
-  ENV = DEV
-  BASE_API_URL= https://dummyjson.com
-  IMAGE_URL= https://dev-tn-file-server.s3.ap-south-1.amazonaws.com 
+
+```
+ ENV = DEV
+ BASE_API_URL= https://dummyjson.com
+ IMAGE_URL= https://dev-tn-file-server.s3.ap-south-1.amazonaws.com
+```
 
 ## Libraries Using RNKitMobmaxime 📚
 
@@ -63,7 +67,6 @@ npx @react-native-community/cli init MyApp --template https://github.com/sharmah
 </tr>
 </table>
 
-
 ## Requirements
 
 Node 18 or greater is required. Development for iOS requires a Mac and Xcode 10 or up, and will target iOS 11 and up.
@@ -72,10 +75,9 @@ You also need to install the dependencies required by React Native.
 Go to the [React Native environment setup](https://reactnative.dev/docs/environment-setup), then select `React Native CLI Quickstart` tab.  
 Follow instructions for your given `development OS` and `target OS`.
 
-
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
