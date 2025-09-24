@@ -19,6 +19,11 @@ To create a new project using the boilerplate simply run :
 npx @react-native-community/cli init MyApp --template https://github.com/sharmahdk13s/RNKitMobmaxime.git
 ```
 
+## Create .env file at the root directory with following configurtion to make login and auth feature works.
+  ENV = DEV
+  BASE_API_URL= https://dummyjson.com
+  IMAGE_URL= https://dev-tn-file-server.s3.ap-south-1.amazonaws.com 
+
 ## Libraries Using RNKitMobmaxime 📚
 
 <table>
