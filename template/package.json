@@ -15,6 +15,7 @@
     "precommit": "concurrently 'yarn tsc' 'yarn lint'",
     "android-bundle-release": "react-native build-android --mode=release",
     "android-run-release": "react-native run-android --mode=release",
+    "podinstall": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install && cd ..",
     "prepare": "husky"
   },
   "dependencies": {

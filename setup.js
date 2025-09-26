@@ -97,11 +97,13 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     console.log("\nCreating .env file...");
     fs.writeFileSync(envPath, envContent);
 
+    console.log(`\nChanging directory to ${projectName}...`);
+    process.chdir(projectPath);
+
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
     console.log(`\nTo get started, run the following commands:\n`);
-    console.log(`  cd ${projectName}`);
-    console.log(`  yarn`);
-    console.log(`  npx pod-install`);
+    console.log(`  yarn podinstall`);
+    console.log(`  yarn android or yarn ios`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);
