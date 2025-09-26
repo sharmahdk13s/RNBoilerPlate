@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-const args = process.argv.slice(2); // grab CLI args
+const args = process.argv.slice(2);
 
+// If user runs `yarn add MyNewApp com.mynewapp`
+// Yarn will try to add those packages.
+// We'll intercept and treat them as projectName + bundleId.
 let projectName = args[0] || process.env.PROJECT_NAME || 'MyApp';
 let bundleId = args[1] || process.env.BUNDLE_ID || `com.${projectName.toLowerCase()}`;
 
@@ -28,11 +33,20 @@ try {
 
   const packageJsonPath = path.join(process.cwd(), 'package.json');
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+  // Remove postinstall hook
   if (packageJson.scripts && packageJson.scripts.postinstall) {
     delete packageJson.scripts.postinstall;
-    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-    console.log('🗑️ Removed postinstall from package.json');
   }
+
+  // Clean up accidental deps Yarn may have inserted
+  if (packageJson.dependencies) {
+    if (packageJson.dependencies[projectName]) delete packageJson.dependencies[projectName];
+    if (packageJson.dependencies[bundleId]) delete packageJson.dependencies[bundleId];
+  }
+
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  console.log('🗑️ Cleaned up package.json');
 } catch (e) {
   console.error('⚠️ Cleanup failed:', e.message);
 }
