@@ -99,9 +99,10 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
 
     // Create run.sh file
     const runShContent = `#!/bin/bash
-    cd ${projectName}
     yarn install
-    yarn podinstall`;
+    bundle install
+    yarn podinstall
+     cd ${projectPath}`;
     const runShPath = path.join(projectPath, "run.sh");
     console.log("\nCreating run.sh file...");
     fs.writeFileSync(runShPath, runShContent);
