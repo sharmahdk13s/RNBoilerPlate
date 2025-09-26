@@ -14,7 +14,7 @@
     "tsc": "node_modules/typescript/bin/tsc --noEmit",
     "precommit": "concurrently 'npm run tsc' 'npm run lint'",
     "prepare": "husky",
-    "postinstall": "node scripts/rename-after-init.js"
+    "postinstall": "node rename-after-init.js"
   },
   "dependencies": {
     "@os-team/i18next-react-native-language-detector": "^1.1.5",

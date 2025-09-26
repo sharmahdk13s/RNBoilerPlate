@@ -21,7 +21,7 @@ try {
 
 // 🧹 Cleanup
 try {
-  const renameFile = path.join(process.cwd(), 'scripts/rename-after-init.js');
+  const renameFile = path.join(process.cwd(), 'rename-after-init.js');
   if (fs.existsSync(renameFile)) {
     fs.rmSync(renameFile);
     console.log('🗑️ Removed rename-after-init.js');
