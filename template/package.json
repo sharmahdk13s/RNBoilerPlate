@@ -13,7 +13,8 @@
     "test:report": "jest --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --coverage",
     "tsc": "node_modules/typescript/bin/tsc --noEmit",
     "precommit": "concurrently 'npm run tsc' 'npm run lint'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "node rename-after-init.js"
   },
   "dependencies": {
     "@os-team/i18next-react-native-language-detector": "^1.1.5",
