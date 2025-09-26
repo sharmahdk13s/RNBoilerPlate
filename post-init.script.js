@@ -14,16 +14,17 @@ async function run() {
 
   // 🔄 Rename logic
   const projectName = process.env.PROJECT_NAME || "MyApp";
-  const bundleId = process.env.BUNDLE_ID || `com.${projectName.toLowerCase()}`;
+  const bundleId = process.env.BUNDLE_ID || `${projectName.toLowerCase()}`;
 
   console.log(
     `\n🔄 Renaming project to: ${projectName} (bundle: ${bundleId})\n`
   );
 
   try {
-    execSync(`npx react-native-rename "${projectName}" -b ${bundleId}`, {
-      stdio: "inherit",
-    });
+    execSync(
+      `npx react-native-rename "${projectName}" -b ${bundleId} --skipGitStatusCheck`,
+      { stdio: "inherit" }
+    );
     console.log("✅ Rename completed!");
   } catch (e) {
     console.error("❌ Rename failed:", e.message);
