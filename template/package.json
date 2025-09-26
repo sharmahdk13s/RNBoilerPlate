@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "setup": "node setup.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .ts,.tsx",
@@ -36,7 +35,8 @@
     "react-native-screens": "^4.6.0",
     "react-native-unistyles": "^2.43.0",
     "react-redux": "^9.2.0",
-    "yup": "^1.6.1"
+    "yup": "^1.6.1",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
