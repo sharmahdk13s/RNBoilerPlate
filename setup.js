@@ -9,25 +9,27 @@ const bundleId = process.argv[3];
 
 if (!projectName || !bundleId) {
   console.error("Project name and bundle ID must be provided.");
-  console.log("Usage: node setup.js <projectName> <bundleId>");
+  console.log("Usage: npm run setup -- <projectName> <bundleId>");
   process.exit(1);
 }
 
-const templatePath = path.join(__dirname, "template");
-const destinationPath = path.join(__dirname, projectName);
+const projectPath = path.join(process.cwd(), projectName);
+
+// Check if the project directory exists
+if (!fs.existsSync(projectPath)) {
+  console.error(`Error: Directory not found at ${projectPath}.`);
+  console.log(
+    "Please ensure you have initialized the project before running the setup script."
+  );
+  process.exit(1);
+}
 
 try {
-  console.log(`Creating project directory at ${destinationPath}...`);
-  fs.mkdirSync(destinationPath, { recursive: true });
-
-  console.log(`Copying template files to ${destinationPath}...`);
-  execSync(`cp -r ${templatePath}/. ${destinationPath}/`); // Using . to copy hidden files as well
-
-  console.log(`Renaming project in ${destinationPath}...`);
+  console.log(`Renaming project in ${projectPath}...`);
   execSync(
     `npx react-native-rename "${projectName}" -b ${bundleId} --skipGitStatusCheck`,
     {
-      cwd: destinationPath,
+      cwd: projectPath,
       stdio: "inherit",
     }
   );
