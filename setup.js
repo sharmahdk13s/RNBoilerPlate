@@ -100,15 +100,22 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     // Create run.sh file
     const runShContent = `#!/bin/bash
     cd ${projectName}
+    yarn install
     yarn podinstall`;
     const runShPath = path.join(projectPath, "run.sh");
     console.log("\nCreating run.sh file...");
     fs.writeFileSync(runShPath, runShContent);
 
+    console.log("\nRunning initial setup script...");
+    execSync(`sh run.sh`, {
+      cwd: projectPath,
+      stdio: "inherit",
+    });
+
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
-    console.log(`\nTo get started, run the following commands:\n`);
-    console.log(`  cd ${projectName}`);
-    console.log(`  sh run.sh`);
+    console.log(
+      `\nTo get started, change your directory to ${projectName} and run the following commands:\n`
+    );
     console.log(`  yarn android # or yarn ios`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
