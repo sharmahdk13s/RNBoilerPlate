@@ -14,13 +14,20 @@
 
 ## Quick Start ⚡
 
-To create a new project using the boilerplate simply run :
+To create a new project using the boilerplate, run the following command:
 
-```
-npx @react-native-community/cli init MyApp --template https://github.com/sharmahdk13s/RNKitMobmaxime.git
+```bash
+npx react-native-kit-mobmaxime
 ```
 
-## Create .env file at the root directory with following configurtion to make login and auth feature works.
+This will launch an interactive setup wizard that will guide you through the following steps:
+
+1.  **Enter Project Name**: You will be prompted to enter the name of your new project.
+2.  **Enter Bundle ID**: You will be prompted to provide the bundle ID for your project.
+
+Once you have provided this information, the script will create your new React Native project with all the boilerplate features pre-configured.
+
+## Create .env file at the root directory with following configurtion to make login and auth feature works. Ignore it if already there.
 
 ```
  ENV = DEV

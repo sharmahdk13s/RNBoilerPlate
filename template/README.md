@@ -42,10 +42,10 @@ The first time you create a new project, run the Ruby bundler to install CocoaPo
 bundle install
 ```
 
-Then, and every time you update your native dependencies, run:
+Then, and every time you update your native dependencies with New Architecture, run:
 
 ```sh
-bundle exec pod install
+RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
 
 For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).

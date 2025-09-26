@@ -12,7 +12,9 @@
     "asset": "npx react-native-asset",
     "test:report": "jest --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --coverage",
     "tsc": "node_modules/typescript/bin/tsc --noEmit",
-    "precommit": "concurrently 'npm run tsc' 'npm run lint'",
+    "precommit": "concurrently 'yarn tsc' 'yarn lint'",
+    "android-bundle-release": "react-native build-android --mode=release",
+    "android-run-release": "react-native run-android --mode=release",
     "prepare": "husky"
   },
   "dependencies": {

@@ -2,10 +2,18 @@
 
 const { execSync } = require("child_process");
 const prompts = require("prompts");
-const fs = require("fs-extra");
+const fs = require("fs");
 const path = require("path");
 
 async function main() {
+  console.log(`
+██████╗ ███╗   ██╗      ███╗   ███╗ ██████╗ ██████╗ ███╗   ███╗ █████╗ ██╗  ██╗██╗███╗   ███╗███████╗
+██╔══██╗████╗  ██║      ████╗ ████║██╔═══██╗██╔══██╗████╗ ████║██╔══██╗╚██╗██╔╝██║████╗ ████║██╔════╝
+██████╔╝██╔██╗ ██║█████╗██╔████╔██║██║   ██║██████╔╝██╔████╔██║███████║ ╚███╔╝ ██║██╔████╔██║█████╗  
+██╔══██╗██║╚██╗██║╚════╝██║╚██╔╝██║██║   ██║██╔══██╗██║╚██╔╝██║██╔══██║ ██╔██╗ ██║██║╚██╔╝██║██╔══╝  
+██║  ██║██║ ╚████║      ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║ ╚═╝ ██║██║  ██║██╔╝ ██╗██║██║ ╚═╝ ██║███████╗
+╚═╝  ╚═╝╚═╝  ╚═══╝      ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚══════╝
+  `);
   console.log("Welcome to the React Native Kit Mobmaxime setup!");
 
   const questions = [
@@ -37,11 +45,13 @@ async function main() {
   }
 
   const projectPath = path.join(process.cwd(), projectName);
-  const templatePath = path.join(__dirname, "template");
 
   try {
-    console.log(`\nCreating new project at: ${projectPath}`);
-    fs.copySync(templatePath, projectPath);
+    console.log(`\nCreating new project at: ${projectPath}...`);
+    execSync(
+      `npx @react-native-community/cli init "${projectName}" --template https://github.com/sharmahdk13s/RNKitMobmaxime.git --pm yarn`,
+      { stdio: "inherit" }
+    );
 
     console.log(
       `\nRenaming project to "${projectName}" with bundle ID "${bundleId}"...`
@@ -57,27 +67,43 @@ async function main() {
     // Final cleanup
     const finalPackageJsonPath = path.join(projectPath, "package.json");
     if (fs.existsSync(finalPackageJsonPath)) {
-      const packageJson = fs.readJsonSync(finalPackageJsonPath);
+      const packageJson = JSON.parse(
+        fs.readFileSync(finalPackageJsonPath, "utf8")
+      );
       delete packageJson.scripts.setup; // remove old setup script if it exists
       delete packageJson.scripts.postinstall; // remove old postinstall script
-      fs.writeJsonSync(finalPackageJsonPath, packageJson, { spaces: 2 });
+      fs.writeFileSync(
+        finalPackageJsonPath,
+        JSON.stringify(packageJson, null, 2)
+      );
     }
     const oldSetupJsPath = path.join(projectPath, "setup.js");
     if (fs.existsSync(oldSetupJsPath)) {
-      fs.removeSync(oldSetupJsPath);
+      fs.unlinkSync(oldSetupJsPath);
     }
+
+    // Remove plugins directory
+    const pluginsPath = path.join(projectPath, "plugins");
+    if (fs.existsSync(pluginsPath)) {
+      console.log("\nRemoving plugins directory...");
+      fs.rmSync(pluginsPath, { recursive: true, force: true });
+    }
+
+    // Create .env file
+    const envContent = `ENV=DEV
+BASE_API_URL=https://dummyjson.com
+IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
+    const envPath = path.join(projectPath, ".env");
+    console.log("\nCreating .env file...");
+    fs.writeFileSync(envPath, envContent);
 
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
     console.log(`\nTo get started, run the following commands:\n`);
     console.log(`  cd ${projectName}`);
-    console.log(`  npm install`);
+    console.log(`  yarn install`);
     console.log(`  npx pod-install`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
-    if (fs.existsSync(projectPath)) {
-      console.log("Cleaning up created directory...");
-      fs.removeSync(projectPath);
-    }
     process.exit(1);
   }
 }
