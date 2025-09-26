@@ -35,8 +35,7 @@
     "react-native-screens": "^4.6.0",
     "react-native-unistyles": "^2.43.0",
     "react-redux": "^9.2.0",
-    "yup": "^1.6.1",
-    "prompts": "^2.4.2"
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
