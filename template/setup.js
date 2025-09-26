@@ -1,41 +1,26 @@
 #!/usr/bin/env node
 
-const { execSync } = require("child_process");
-const path = require("path");
-const fs = require("fs");
+const { execSync } = require('child_process');
 
-const projectName = process.argv[2];
-const bundleId = process.argv[3];
+const newProjectName = process.argv[2];
+const newBundleId = process.argv[3];
 
-if (!projectName || !bundleId) {
-  console.error("Project name and bundle ID must be provided.");
-  console.log("Usage: npm run setup -- <projectName> <bundleId>");
-  process.exit(1);
-}
-
-const projectPath = path.join(process.cwd(), projectName);
-
-// Check if the project directory exists
-if (!fs.existsSync(projectPath)) {
-  console.error(`Error: Directory not found at ${projectPath}.`);
-  console.log(
-    "Please ensure you have initialized the project before running the setup script."
-  );
+if (!newProjectName || !newBundleId) {
+  console.error('Error: New project name and bundle ID are required.');
+  console.log('Usage: npm run setup -- <NewProjectName> <com.yourcompany.newprojectname>');
   process.exit(1);
 }
 
 try {
-  console.log(`Renaming project in ${projectPath}...`);
-  execSync(
-    `npx react-native-rename "${projectName}" -b ${bundleId} --skipGitStatusCheck`,
-    {
-      cwd: projectPath,
-      stdio: "inherit",
-    }
-  );
+  console.log(`\n🔄 Renaming project to "${newProjectName}" with bundle ID "${newBundleId}"...\n`);
 
-  console.log("Project setup complete!");
-} catch (error) {
-  console.error(`An error occurred: ${error.message}`);
+  // This script is run from the project root, so we can execute the command directly.
+  execSync(`npx react-native-rename "${newProjectName}" -b "${newBundleId}" --skipGitStatusCheck`, {
+    stdio: 'inherit',
+  });
+
+  console.log('\n✅ Project renamed successfully!');
+} catch (err) {
+  console.error(`\n❌ Error renaming project: ${err.message}`);
   process.exit(1);
 }
