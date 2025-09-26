@@ -99,25 +99,27 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
 
     // Create run.sh file
     const runShContent = `#!/bin/bash
-    yarn install
-    bundle install
-    yarn podinstall
-     cd ${projectPath}`;
+        yarn
+        chmod 755 android/gradlew
+        bundle install
+        yarn podinstall`;
     const runShPath = path.join(projectPath, "run.sh");
     console.log("\nCreating run.sh file...");
     fs.writeFileSync(runShPath, runShContent);
+    execSync(`chmod +x run.sh`, {
+      cwd: projectPath,
+      stdio: "inherit",
+    });
 
     console.log("\nRunning initial setup script...");
-    execSync(`sh run.sh`, {
+    execSync(`./run.sh`, {
       cwd: projectPath,
       stdio: "inherit",
     });
 
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
-    console.log(
-      `\nTo get started, change your directory to ${projectName} and run the following commands:\n`
-    );
-    console.log(`  yarn android # or yarn ios`);
+    console.log(`\nTo get started, run the following commands:\n`);
+    console.log(`  yarn android or\n yarn ios --simulator "iPhone 15 Pro"`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);
