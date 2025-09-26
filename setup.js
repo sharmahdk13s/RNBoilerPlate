@@ -102,7 +102,9 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
         yarn
         chmod 755 android/gradlew
         bundle install
-        yarn podinstall`;
+        yarn podinstall
+        rm -rf run.sh
+        cd ${projectPath}`;
     const runShPath = path.join(projectPath, "run.sh");
     console.log("\nCreating run.sh file...");
     fs.writeFileSync(runShPath, runShContent);
@@ -118,8 +120,8 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     });
 
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
-    console.log(`\nTo get started, run the following commands:\n`);
-    console.log(`  yarn android or\n yarn ios --simulator "iPhone 15 Pro"`);
+    console.log(`You need to do it manually as the final step:\n`);
+    console.log(`  yarn android \n yarn ios --simulator="iPhone 15 Pro"`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);
