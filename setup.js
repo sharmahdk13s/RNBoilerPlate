@@ -49,7 +49,7 @@ async function main() {
   try {
     console.log(`\nCreating new project at: ${projectPath}...`);
     execSync(
-      `npx @react-native-community/cli init "${projectName}" --template https://github.com/sharmahdk13s/RNKitMobmaxime.git --pm yarn`,
+      `npx @react-native-community/cli init "${projectName}" --template git+https://github.com/sharmahdk13s/RNKitMobmaxime.git --pm yarn`,
       { stdio: "inherit" }
     );
 
@@ -100,7 +100,7 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
     console.log(`\nTo get started, run the following commands:\n`);
     console.log(`  cd ${projectName}`);
-    console.log(`  yarn install`);
+    console.log(`  yarn`);
     console.log(`  npx pod-install`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
