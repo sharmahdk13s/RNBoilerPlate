@@ -97,13 +97,19 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     console.log("\nCreating .env file...");
     fs.writeFileSync(envPath, envContent);
 
-    console.log(`\nChanging directory to ${projectName}...`);
-    process.chdir(projectPath);
+    // Create run.sh file
+    const runShContent = `#!/bin/bash
+    cd ${projectName}
+    yarn podinstall`;
+    const runShPath = path.join(projectPath, "run.sh");
+    console.log("\nCreating run.sh file...");
+    fs.writeFileSync(runShPath, runShContent);
 
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
     console.log(`\nTo get started, run the following commands:\n`);
-    console.log(`  yarn podinstall`);
-    console.log(`  yarn android or yarn ios`);
+    console.log(`  cd ${projectName}`);
+    console.log(`  sh run.sh`);
+    console.log(`  yarn android # or yarn ios`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);
