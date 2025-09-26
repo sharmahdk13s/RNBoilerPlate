@@ -49,7 +49,7 @@ async function main() {
   try {
     console.log(`\nCreating new project at: ${projectPath}...`);
     execSync(
-      `npx @react-native-community/cli init "${projectName}" --template git+https://github.com/sharmahdk13s/RNKitMobmaxime.git --pm yarn`,
+      `npx @react-native-community/cli init "${projectName}" --template react-native-kit-mobmaxime@git+https://github.com/sharmahdk13s/RNKitMobmaxime.git --pm yarn`,
       { stdio: "inherit" }
     );
 
