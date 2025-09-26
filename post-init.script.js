@@ -21,10 +21,10 @@ async function run() {
   );
 
   try {
-    execSync(
-      `npx react-native-rename "${projectName}" -b ${bundleId} --skipGitStatusCheck`,
-      { stdio: "inherit" }
-    );
+    execSync("git init", { stdio: "inherit" });
+    execSync(`npx react-native-rename "${projectName}" -b ${bundleId}`, {
+      stdio: "inherit",
+    });
     console.log("✅ Rename completed!");
   } catch (e) {
     console.error("❌ Rename failed:", e.message);
