@@ -118,11 +118,6 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
       stdio: "inherit",
     });
 
-    execSync(`chmod +x cd ${projectName}`, {
-      cwd: projectPath,
-      stdio: "inherit",
-    });
-
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
     console.log(`You need to do it manually as the final step:\n`);
     console.log(

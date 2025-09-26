@@ -1,6 +1,6 @@
 {
   "name": "react-native-kit-mobmaxime",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Boilerplate for react native project",
   "bin": {
     "react-native-kit-mobmaxime": "setup.js"
