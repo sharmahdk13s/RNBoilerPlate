@@ -1,4 +1,4 @@
-# RNKitMobmaxime
+# RNBoilerPlate - The Ultimate Latest React-Native App QuickStart
 
 ⚛️ React Native Boilerplate: Jumpstart your app development with essential configurations for React Native projects. Includes libraries, navigation, state management, and styling setup. Streamline your workflow and focus on building amazing mobile experiences! 📱✨
 
@@ -17,7 +17,7 @@
 To create a new project using the boilerplate, run the following command:
 
 ```bash
-npx react-native-kit-mobmaxime
+npx react-native-boilerplate
 ```
 
 This will launch an interactive setup wizard that will guide you through the following steps:
@@ -35,7 +35,7 @@ Once you have provided this information, the script will create your new React N
  IMAGE_URL= https://dev-tn-file-server.s3.ap-south-1.amazonaws.com
 ```
 
-## Libraries Using RNKitMobmaxime 📚
+## Libraries Using RNBoilerPlate 📚
 
 <table>
 <tr>

@@ -1,13 +1,13 @@
 {
-  "name": "react-native-kit-mobmaxime",
-  "version": "1.2.18",
+  "name": "react-native-boilerplate",
+  "version": "1.3",
   "description": "Boilerplate for react native project",
   "bin": {
-    "react-native-kit-mobmaxime": "run.sh"
+    "react-native-kit-boilerplate": "run.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharmahdk13s/RNKitMobmaxime.git"
+    "url": "git+https://github.com/sharmahdk13s/RNBoilerPlate.git"
   },
   "keywords": [
     "react-native",
@@ -20,19 +20,27 @@
     "javascript",
     "boilerplate",
     "code",
-    "mobmaxime",
+    "latest",
+    "dynamic",
+    "bundleId",
+    "smooth",
+    "performance",
+    "experience",
+    "hybrid",
+    "android",
+    "iOS",
+    "mobile application",
     "thecodingmachine"
   ],
-  "author": "Mobmaxime RN",
+  "author": "Hardik Sharma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sharmahdk13s/RNKitMobmaxime/issues"
+    "url": "https://github.com/sharmahdk13s/RNBoilerPlate/issues"
   },
-  "homepage": "https://github.com/sharmahdk13s/RNKitMobmaxime#readme",
+  "homepage": "https://github.com/sharmahdk13s/RNBoilerPlate#readme",
   "dependencies": {
     "kleur": "^4.1.5",
     "prompts": "^2.4.1",
-    "react-native-rename": "^3.2.17",
     "fs-extra": "^11.2.0"
   }
 }

@@ -1,5 +1,6 @@
 module.exports = {
-  placeholderName: "RNKitMobmaxime",
-  titlePlaceholder: "RNKitMobmaxime React Native Boilerplate",
+  placeholderName: "RNBoilerPlate",
+  titlePlaceholder:
+    "RNBoilerPlate - The Ultimate Latest React-Native Project QuickStart",
   templateDir: "./template",
 };
