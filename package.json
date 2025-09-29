@@ -5,9 +5,6 @@
   "bin": {
     "react-native-kit-mobmaxime": "setup.js"
   },
-  "publishConfig": {
-    "registry": "https://www.npmjs.com/package/react-native-kit-mobmaxime/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sharmahdk13s/RNKitMobmaxime.git"
