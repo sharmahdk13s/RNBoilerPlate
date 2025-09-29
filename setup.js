@@ -122,17 +122,7 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     console.log(
       `You can now run the following commands to start your project:\n`
     );
-    console.log(`yarn android\n  yarn ios --simulator="iPhone 15 Pro"`);
-
-    // Automatically change directory to the new project
-    const os = require("os");
-    const shell = os.platform() === "win32" ? "cmd" : "bash";
-    const spawn = require("child_process").spawn;
-
-    spawn(shell, ["-i"], {
-      cwd: projectPath,
-      stdio: "inherit",
-    });
+    console.log(`yarn android\nyarn ios --simulator="iPhone 15 Pro"`);
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);

@@ -5,6 +5,10 @@
   "bin": {
     "react-native-kit-mobmaxime": "setup.js"
   },
+  "scripts": {
+    "start": "bash run.sh",
+    "setup": "node setup.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sharmahdk13s/RNKitMobmaxime.git"
