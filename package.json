@@ -1,9 +1,9 @@
 {
-  "name": "react-native-boilerplate",
-  "version": "1.3",
-  "description": "Boilerplate for react native project",
+  "name": "rn-react-native-boilerplate",
+  "version": "1.3.0",
+  "description": "A React Native boilerplate for building cross-platform mobile apps.",
   "bin": {
-    "react-native-kit-boilerplate": "run.sh"
+    "rn-react-native-boilerplate": "run.sh"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,6 @@
     "react-native",
     "react-native-rename",
     "starter-kit",
-    "react",
-    "native",
-    "react-native",
     "typescript",
     "javascript",
     "boilerplate",

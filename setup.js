@@ -51,7 +51,7 @@ async function main() {
   try {
     console.log(`\nCreating new project at: ${projectPath}...`);
     execSync(
-      `npx @react-native-community/cli init "${projectName}" --template react-native-boilerplate@git+https://github.com/sharmahdk13s/RNBoilerPlate.git --pm yarn`,
+      `npx @react-native-community/cli init "${projectName}" --template rn-react-native-boilerplate@git+https://github.com/sharmahdk13s/RNBoilerPlate.git --pm yarn`,
       { stdio: "inherit" }
     );
 
