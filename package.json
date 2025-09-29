@@ -1,9 +1,12 @@
 {
   "name": "react-native-kit-mobmaxime",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "Boilerplate for react native project",
   "bin": {
     "react-native-kit-mobmaxime": "setup.js"
+  },
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/react-native-kit-mobmaxime/"
   },
   "repository": {
     "type": "git",

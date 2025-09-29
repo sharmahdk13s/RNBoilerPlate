@@ -119,10 +119,20 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     });
 
     console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
-    console.log(`You need to do it manually as the final step:\n`);
     console.log(
-      ` cd ${projectName} \n yarn android \n yarn ios --simulator="iPhone 15 Pro"`
+      `You can now run the following commands to start your project:\n`
     );
+    console.log(`yarn android\n  yarn ios --simulator="iPhone 15 Pro"`);
+
+    // Automatically change directory to the new project
+    const os = require("os");
+    const shell = os.platform() === "win32" ? "cmd" : "bash";
+    const spawn = require("child_process").spawn;
+
+    spawn(shell, ["-i"], {
+      cwd: projectPath,
+      stdio: "inherit",
+    });
   } catch (err) {
     console.error(`\n❌ An error occurred during setup: ${err.message}`);
     process.exit(1);
