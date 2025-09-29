@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .ts,.tsx",
     "start": "react-native start",
+    "start-logs": "npx react-native start --reset-cache --client-logs",
     "reset": "react-native start --reset-cache",
     "test": "jest",
     "asset": "npx react-native-asset",

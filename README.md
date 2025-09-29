@@ -1,4 +1,4 @@
-# RNBoilerPlate - The Ultimate Latest React-Native App QuickStart with **rn-react-native-boilerplate**
+# RNBoilerPlate - The Ultimate Latest React-Native App QuickStart
 
 ⚛️ React Native Boilerplate: Jumpstart your app development with essential configurations for React Native projects. Includes libraries, navigation, state management, and styling setup. Streamline your workflow and focus on building amazing mobile experiences! 📱✨
 
@@ -22,12 +22,14 @@ npx rn-react-native-boilerplate
 
 This will launch an interactive setup wizard that will guide you through the following steps:
 
-1.  **Enter Project Name**: You will be prompted to enter the name of your new project.
-2.  **Enter Bundle ID**: You will be prompted to provide the bundle ID for your project.
+1. **Enter Project Name**: You will be prompted to enter the name of your new project.
+2. **Enter Bundle ID**: You will be prompted to provide the bundle ID for your project.
 
 Once you have provided this information, the script will create your new React Native project with all the boilerplate features pre-configured.
 
-## Create .env file at the root directory with following configurtion to make login and auth feature works. Ignore it if already there.
+## Create .env file at the root directory with following configurtion to make login and auth feature works.
+
+## Ignore if its already there
 
 ```
  ENV = DEV
@@ -86,6 +88,12 @@ Follow instructions for your given `development OS` and `target OS`.
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+### For getting console logs in Metro builder
+
+```bash
+yarn start-logs
+```
+
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
@@ -130,7 +138,7 @@ npm run ios
 
 # OR using Yarn
 cd ios
-pod install
+RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 yarn ios
 ```
 
