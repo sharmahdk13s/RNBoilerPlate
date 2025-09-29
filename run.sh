@@ -1,8 +1,16 @@
 #!/bin/bash
 set -e
 
-# Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# --- START: Resolve the actual script directory ---
+# This handles script being run as a symlink, which is what npx does.
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do # Use -L to check for symlink, more portable than -h
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+# --- END: Resolve the actual script directory ---
 
 # Run the setup script using its absolute path
 node "$SCRIPT_DIR/setup.js"
