@@ -1,8 +1,11 @@
 #!/bin/bash
 set -e
 
-# Run the setup script
-node setup.js
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Run the setup script using its absolute path
+node "$SCRIPT_DIR/setup.js"
 
 # Find the latest created directory, which will be our project
 PROJECT_NAME=$(ls -td -- */ | head -n 1 | cut -d'/' -f1)
