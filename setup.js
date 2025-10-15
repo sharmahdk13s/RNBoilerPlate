@@ -121,13 +121,15 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
       stdio: "inherit",
     });
 
-    console.log(`\n✅ Success! Your new project "${projectName}" is ready.`);
+    console.log(
+      `\n✅ Success! Your new project "${projectName}" is ready.\n\n`
+    );
     console.log(
       `You can now run the following commands to start your project:\n`
     );
     console.log(`yarn android\nyarn ios --simulator="iPhone 15 Pro"`);
     console.log(
-      `To display console logs in your Metro bundler terminal, run the following command:\n`
+      `\nTo display console logs in your Metro bundler terminal, run the following command:\n`
     );
     console.log(`yarn start-logs\n\n`);
   } catch (err) {
