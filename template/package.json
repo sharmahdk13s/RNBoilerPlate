@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .ts,.tsx",
-    "start": "react-native start",
+    "start": "start --reset-cache",
     "start-logs": "npx react-native start --reset-cache --client-logs",
     "reset": "react-native start --reset-cache",
     "test": "jest",
@@ -37,7 +37,8 @@
     "react-native-worklets": "^0.6.1",
     "react-native-restart": "^0.0.27",
     "react-native-safe-area-context": "^5.5.2",
-    "react-native-screens": "^4.6.0",
+    "react-native-screens": "^4.16.0",
+    "react-native-is-edge-to-edge": "^1.2.1",
     "react-native-unistyles": "^2.43.0",
     "react-redux": "^9.2.0",
     "yup": "^1.6.1"

@@ -1,6 +1,6 @@
 {
   "name": "rn-react-native-boilerplate",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A React Native boilerplate for building cross-platform mobile apps.",
   "bin": {
     "rn-react-native-boilerplate": "run.sh"
