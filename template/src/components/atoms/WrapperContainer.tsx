@@ -1,7 +1,8 @@
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import React from 'react';
-import {I18nManager, SafeAreaView, StatusBar, View} from 'react-native';
-import {createStyleSheet, useStyles} from 'react-native-unistyles';
+import { StatusBar, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { createStyleSheet, useStyles } from 'react-native-unistyles';
 
 const stylesheet = createStyleSheet(theme => ({
   container: {
