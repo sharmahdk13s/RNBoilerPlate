@@ -102,6 +102,7 @@ IMAGE_URL=https://dev-tn-file-server.s3.ap-south-1.amazonaws.com`;
     // Create run.sh file
     const runShContent = `#!/bin/bash
         yarn
+        npx react-native-asset
         chmod 755 android/gradlew
         bundle install
         yarn podinstall
